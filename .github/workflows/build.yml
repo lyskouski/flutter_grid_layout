@@ -9,4 +9,8 @@ jobs:
   publish:
     permissions:
       id-token: write
-    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+        cache: true
+    - uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
