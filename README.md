@@ -32,7 +32,7 @@ GridContainer(
 ),
 ```
 
-[Centered Item](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.1.png)
+![Centered Item](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.1.png)
 
 ## Multiple Items with different layers
 
@@ -61,7 +61,7 @@ GridContainer(
 ),
 ```
 
-[Multiple Items](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.2.png)
+![Multiple Items](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.2.png)
 
 ## Support (Sponsorship)
 
