@@ -7,10 +7,13 @@ on:
 
 jobs:
   publish:
-    permissions:
-      id-token: write
-    - uses: subosito/flutter-action@v2
+    - name: Install Flutter SDK
+      uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
         cache: true
-    - uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+
+    - name: Publish
+      permissions:
+        id-token: write
+      uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
