@@ -1,0 +1,16 @@
+{
+    "files.eol": "\r\n",
+    "dart.lineLength": 120,
+    "editor.rulers": [
+        120
+    ],
+    "[dart]": {
+        "editor.rulers": [
+            120
+        ],
+        "editor.formatOnSave": true,
+    },
+    "files.associations": {
+        "*.arb": "json"
+    }
+}
