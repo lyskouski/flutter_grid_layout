@@ -1,12 +1,12 @@
 name: flutter_grid_layout
 description: Grid Layout (CSS) for Flutter 
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/lyskouski/flutter_grid_layout
 repository: https://github.com/lyskouski/flutter_grid_layout
 issue_tracker: https://github.com/lyskouski/flutter_grid_layout/issues
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: '>=3.1.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
