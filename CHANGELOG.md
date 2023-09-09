@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Improve automated publishing
+
 ## 0.0.3
 
 * Automated publishing
