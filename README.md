@@ -1,5 +1,8 @@
 # Grid Layout (CSS) for Flutter
 
+[![Test Status](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/test.yml/badge.svg)](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/test.yml)
+[![Build Status](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml/badge.svg)](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml)
+
 Embracing a grid layout as part of an adaptive design strategy is a pivotal step toward creating a versatile and 
 user-centric digital experience. Grids provide the structure needed to maintain visual consistency, prioritize content, 
 and seamlessly adapt to diverse screen sizes. Whether you're designing a digital interface, harnessing the potential of 
