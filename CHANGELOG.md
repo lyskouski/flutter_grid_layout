@@ -1,3 +1,7 @@
+## 0.1.0
+
+* Reconfigure automated publishing
+
 ## 0.0.5
 
 * Downgrade SDK to 3.1.0
