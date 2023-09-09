@@ -4,11 +4,24 @@
 import 'package:flutter/widgets.dart';
 
 class GridItem extends StatelessWidget {
-  const GridItem({super.key});
+  // Indexes from GridContainer(columns, rows)
+  final Size start;
+  // Indexes from GridContainer(columns, rows)
+  final Size end;
+  // Layer index
+  final int zIndex;
+  final Widget child;
+
+  const GridItem({
+    super.key,
+    required this.child,
+    required this.start,
+    required this.end,
+    int? order,
+  }) : zIndex = order ?? 0;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return child;
   }
 }
