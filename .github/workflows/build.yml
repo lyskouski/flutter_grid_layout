@@ -27,5 +27,5 @@ jobs:
         working-directory: ${{ inputs.working-directory }}
 
       - name: Publish to pub.dev
-        run: flutter pub pub publish -f --verbose
+        run: flutter pub publish -f --verbose
         working-directory: ${{ inputs.working-directory }}
