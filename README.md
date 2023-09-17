@@ -14,6 +14,7 @@ and displays.
 - Basic implementation of [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
 ## Getting started
+https://pub.dev/packages/flutter_grid_layout
 
 ```bash
 flutter pub add flutter_grid_layout
