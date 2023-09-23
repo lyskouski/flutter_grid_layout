@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Use safe position binding (to avoid out-of-range error)
+
 ## 0.1.0
 
 * Reconfigure automated publishing
