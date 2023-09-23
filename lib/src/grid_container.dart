@@ -3,6 +3,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_grid_layout/flutter_grid_layout.dart';
+import 'package:flutter_grid_layout/src/list_ext.dart';
 
 class GridContainer extends StatelessWidget {
   // 0.5 -> 50%, 10 -> 10 DIP, null -> auto
@@ -47,7 +48,12 @@ class GridContainer extends StatelessWidget {
   }
 
   List<double> _scale(List<double> scope) {
-    return scope.asMap().entries.map((entry) => scope.sublist(0, entry.key + 1).fold(0.0, (v, e) => v + e)).toList();
+    return scope
+        .asMap()
+        .entries
+        .map((entry) =>
+            scope.sublist(0, entry.key + 1).fold(0.0, (v, e) => v + e))
+        .toList();
   }
 
   List<double> _calcWidth(double maxWidth) {
@@ -70,12 +76,14 @@ class GridContainer extends StatelessWidget {
       return Stack(
         children: List<Widget>.generate(children.length, (index) {
           final item = children[index];
-          final itemWidth = width[item.end.width.toInt()] - width[item.start.width.toInt()];
-          final itemHeight = height[item.end.height.toInt()] - height[item.start.height.toInt()];
+          final itemWidth =
+              width.by(item.end.width) - width.by(item.start.width);
+          final itemHeight =
+              height.by(item.end.height) - height.by(item.start.height);
           return Container(
             margin: EdgeInsets.only(
-              left: width[item.start.width.toInt()],
-              top: height[item.start.height.toInt()],
+              left: width.by(item.start.width),
+              top: height.by(item.start.height),
             ),
             constraints: BoxConstraints(
               maxWidth: itemWidth,
