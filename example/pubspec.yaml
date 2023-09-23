@@ -1,0 +1,21 @@
+name: example
+description: Example project for Grid Layout component
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_grid_layout: ^1.0.0
+
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
