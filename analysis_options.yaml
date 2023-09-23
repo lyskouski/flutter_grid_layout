@@ -2,5 +2,4 @@ include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
-    lines_longer_than_80_chars: false
     eol_at_end_of_file: true

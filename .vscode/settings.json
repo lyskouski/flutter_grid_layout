@@ -1,12 +1,12 @@
 {
     "files.eol": "\r\n",
-    "dart.lineLength": 120,
+    "dart.lineLength": 80,
     "editor.rulers": [
-        120
+        80
     ],
     "[dart]": {
         "editor.rulers": [
-            120
+            80
         ],
         "editor.formatOnSave": true,
     },
