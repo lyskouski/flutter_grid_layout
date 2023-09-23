@@ -11,6 +11,7 @@ class GridItem extends StatelessWidget {
   final Size end;
   // Layer index
   final int zIndex;
+  // Widget to be drown
   final Widget child;
 
   const GridItem({

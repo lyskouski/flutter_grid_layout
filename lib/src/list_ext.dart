@@ -3,7 +3,7 @@
 // that can be found in the LICENSE file.
 
 extension ListExt on List {
-  // Safely get by index
+  // Safely get element from the list by index
   dynamic by(dynamic index) => this[(switch (index.runtimeType) {
         double => (index as double).toInt(),
         String => int.tryParse(index) ?? 0,

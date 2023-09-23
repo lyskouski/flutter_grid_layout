@@ -11,6 +11,7 @@ class GridContainer extends StatelessWidget {
   final List<double?> columns;
   // 0.5 -> 50%, 10 -> 10 DIP, null -> auto
   final List<double?> rows;
+  // List of elements for plotting
   final List<GridItem> children;
 
   const GridContainer({
@@ -20,6 +21,7 @@ class GridContainer extends StatelessWidget {
     required this.rows,
   });
 
+  // Calculate DIP for relative values
   List<double> _calc(double size, List<double?> scope) {
     int restCount = scope.where((e) => e == null).length;
     double takenSize = 0;
@@ -48,6 +50,7 @@ class GridContainer extends StatelessWidget {
     return scope.cast();
   }
 
+  // Restate widths from zero-point
   List<double> _scale(List<double> scope) {
     return scope
         .asMap()
@@ -57,13 +60,11 @@ class GridContainer extends StatelessWidget {
         .toList();
   }
 
-  List<double> _calcWidth(double maxWidth) {
-    return _calc(maxWidth, rows);
-  }
+  // Calculate widths from relative values
+  List<double> _calcWidth(double maxWidth) => _calc(maxWidth, rows);
 
-  List<double> _calcHeight(double maxHeight) {
-    return _calc(maxHeight, columns);
-  }
+  // Calculate heights from relative values
+  List<double> _calcHeight(double maxHeight) => _calc(maxHeight, columns);
 
   @override
   Widget build(BuildContext context) {

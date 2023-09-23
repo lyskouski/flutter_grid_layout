@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Add example project
+
 ## 1.0.0
 
 * Use safe position binding (to avoid out-of-range error)
