@@ -1,3 +1,8 @@
+## 1.0.2
+
+* Adjust example project to one file
+
+
 ## 1.0.1
 
 * Add example project
