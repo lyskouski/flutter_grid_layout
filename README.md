@@ -2,6 +2,7 @@
 
 [![Test Status](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/test.yml/badge.svg)](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/test.yml)
 [![Build Status](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml/badge.svg)](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml)
+<a href="https://www.buymeacoffee.com/lyskouski"><img height="20" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=lyskouski&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 Embracing a grid layout as part of an adaptive design strategy is a pivotal step toward creating a versatile and 
 user-centric digital experience. Grids provide the structure needed to maintain a visual consistency, prioritize content, 
@@ -67,14 +68,4 @@ GridContainer(
 
 ![Multiple Items](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.2.png)
 
-## Support (Sponsorship)
-
-Sponsorship would serve as an investment in the continuous evolution and improvement of open-source projects carried 
-out by the `terCAD` team. So, if you'd like to contribute financially towards the efforts, please consider these options:
-
-* [Github Sponsorship](https://github.com/users/lyskouski/sponsorship)
-* [Paypal](https://www.paypal.me/terCAD)
-* [Patreon](https://www.patreon.com/terCAD)
-* [Donorbox](https://donorbox.org/tercad)
-
-Or, [treat us to :coffee:](https://www.buymeacoffee.com/lyskouski).
+In addition to thanking, you may [treat us to :coffee:](https://www.buymeacoffee.com/lyskouski).
