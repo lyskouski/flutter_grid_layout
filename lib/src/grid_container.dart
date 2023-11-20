@@ -82,6 +82,9 @@ class GridContainer extends StatelessWidget {
               width.by(item.end.width) - width.by(item.start.width);
           final itemHeight =
               height.by(item.end.height) - height.by(item.start.height);
+          if (itemWidth <= 0 || itemHeight <= 0) {
+            return const SizedBox();
+          }
           return Container(
             margin: EdgeInsets.only(
               left: width.by(item.start.width),

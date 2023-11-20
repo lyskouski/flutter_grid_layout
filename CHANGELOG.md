@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Hide elements with negative values
+
 ## 1.0.3
 
 * Update README.md

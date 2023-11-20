@@ -4,11 +4,9 @@
 [![Build Status](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml/badge.svg)](https://github.com/lyskouski/flutter_grid_layout/actions/workflows/build.yml)
 <a href="https://www.buymeacoffee.com/lyskouski"><img height="20" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=lyskouski&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
-Embracing a grid layout as part of an adaptive design strategy is a pivotal step toward creating a versatile and 
-user-centric digital experience. Grids provide the structure needed to maintain a visual consistency, prioritize content, 
-and seamlessly adapt to diverse screen sizes. Whether you're designing a digital interface, harnessing the potential of 
-grid layouts is essential for delivering an exceptional User Experience (UX) across a landscape of devices 
-and displays.
+![Grid Layout](./assets/grid-layout.svg)
+
+Embracing a grid layout is essential for creating adaptable and user-friendly digital designs. Grids ensure visual consistency, prioritize content, and seamlessly adapt to various screen sizes, enhancing the overall user experience across devices and displays.
 
 ## Features
 
