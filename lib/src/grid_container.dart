@@ -33,9 +33,6 @@ class GridContainer extends StatelessWidget {
 
   // Calculate DIP for relative values
   List<double> _calc(double size, List<double?> scope) {
-    if (alignment == MainAxisAlignment.end) {
-      scope = scope.reversed.toList();
-    }
     int restCount = scope.where((e) => e == null).length;
     double takenSize = 0;
     for (int i = 0; i < scope.length; i++) {
@@ -74,7 +71,12 @@ class GridContainer extends StatelessWidget {
   }
 
   // Calculate widths from relative values
-  List<double> _calcWidth(double maxWidth) => _calc(maxWidth, rows);
+  List<double> _calcWidth(double maxWidth) {
+    if (alignment == MainAxisAlignment.end) {
+      return _calc(maxWidth, rows.reversed.toList());
+    }
+    return _calc(maxWidth, rows);
+  }
 
   // Calculate heights from relative values
   List<double> _calcHeight(double maxHeight) => _calc(maxHeight, columns);
@@ -84,8 +86,8 @@ class GridContainer extends StatelessWidget {
     if (alignment == MainAxisAlignment.end) {
       item = GridItem(
         order: item.zIndex,
-        start: Size(columns.length - item.end.width, item.start.height),
-        end: Size(columns.length - item.start.width, item.end.height),
+        start: Size(rows.length - item.end.width, item.start.height),
+        end: Size(rows.length - item.start.width, item.end.height),
         child: item.child,
       );
     }

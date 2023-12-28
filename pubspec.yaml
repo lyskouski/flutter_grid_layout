@@ -1,6 +1,6 @@
 name: flutter_grid_layout
 description: Grid Layout (CSS) for Flutter -- adaptive design strategy, optimized for a complex user interface design.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/lyskouski/flutter_grid_layout
 repository: https://github.com/lyskouski/flutter_grid_layout
 issue_tracker: https://github.com/lyskouski/flutter_grid_layout/issues

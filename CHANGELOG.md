@@ -1,3 +1,7 @@
+## 1.1.1
+
+* Reverse only horizontally
+
 ## 1.1.0
 
 * Add support to reversed order
