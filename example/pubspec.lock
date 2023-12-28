@@ -26,10 +26,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_grid_layout
-      sha256: "9544e2d63cb3a952b33f08748ab835a255ce423a3cb4d180b32aacf459cb2448"
+      sha256: a71000bb31a122cb30341a00857a400687ac5591ce4eeded151170864ea549ee
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   flutter_lints:
     dependency: "direct dev"
     description:

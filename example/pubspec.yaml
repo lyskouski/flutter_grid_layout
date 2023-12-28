@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_grid_layout: ^1.1.0
+  flutter_grid_layout: ^1.1.1
 
 
 dev_dependencies:
