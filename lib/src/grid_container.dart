@@ -7,22 +7,35 @@ import 'package:flutter_grid_layout/flutter_grid_layout.dart';
 import 'package:flutter_grid_layout/src/list_ext.dart';
 
 class GridContainer extends StatelessWidget {
+  /// Columns size declaration
   // 0.5 -> 50%, 10 -> 10 DIP, null -> auto
   final List<double?> columns;
+
+  /// Rows size declaration
   // 0.5 -> 50%, 10 -> 10 DIP, null -> auto
   final List<double?> rows;
-  // List of elements for plotting
+
+  /// List of elements for plotting
   final List<GridItem> children;
+
+  /// Type of alignment
+  // Right-to-Left: MainAxisAlignment.end
+  // Left-to-Right: MainAxisAlignment.start
+  final MainAxisAlignment alignment;
 
   const GridContainer({
     super.key,
     required this.children,
     required this.columns,
     required this.rows,
+    this.alignment = MainAxisAlignment.start,
   });
 
   // Calculate DIP for relative values
   List<double> _calc(double size, List<double?> scope) {
+    if (alignment == MainAxisAlignment.end) {
+      scope = scope.reversed.toList();
+    }
     int restCount = scope.where((e) => e == null).length;
     double takenSize = 0;
     for (int i = 0; i < scope.length; i++) {
@@ -66,6 +79,19 @@ class GridContainer extends StatelessWidget {
   // Calculate heights from relative values
   List<double> _calcHeight(double maxHeight) => _calc(maxHeight, columns);
 
+  GridItem _get(index) {
+    GridItem item = children[index];
+    if (alignment == MainAxisAlignment.end) {
+      item = GridItem(
+        order: item.zIndex,
+        start: Size(columns.length - item.end.width, item.start.height),
+        end: Size(columns.length - item.start.width, item.end.height),
+        child: item.child,
+      );
+    }
+    return item;
+  }
+
   @override
   Widget build(BuildContext context) {
     if (columns.isEmpty || rows.isEmpty || children.isEmpty) {
@@ -77,7 +103,7 @@ class GridContainer extends StatelessWidget {
       final height = _scale(_calcHeight(constraints.maxHeight));
       return Stack(
         children: List<Widget>.generate(children.length, (index) {
-          final item = children[index];
+          final item = _get(index);
           final itemWidth =
               width.by(item.end.width) - width.by(item.start.width);
           final itemHeight =

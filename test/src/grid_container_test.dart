@@ -1,5 +1,6 @@
 // Copyright 2023 The terCAD team. All rights reserved.
-// Use of this source code is governed by a MIT license that can be found in the LICENSE file.
+// Use of this source code is governed by a MIT license
+// that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
 import 'package:flutter_grid_layout/src/grid_container.dart';
@@ -11,12 +12,14 @@ void main() {
     final testCases = [
       (
         title: 'Plot an empty scope',
+        alignment: MainAxisAlignment.start,
         columns: [],
         rows: [],
         children: [],
       ),
       (
         title: 'Plot centered item',
+        alignment: MainAxisAlignment.start,
         columns: [0.2, null, 0.2],
         rows: [0.2, null, 0.2],
         children: [
@@ -29,6 +32,31 @@ void main() {
       ),
       (
         title: 'Plot multiple nested items',
+        alignment: MainAxisAlignment.start,
+        columns: [0.2, 0.3, 0.3, 0.2],
+        rows: [0.2, 0.3, 0.3, 0.2],
+        children: [
+          GridItem(
+            start: const Size(0, 0),
+            end: const Size(4, 1),
+            child: Container(color: Colors.red),
+          ),
+          GridItem(
+            start: const Size(1, 0),
+            end: const Size(3, 4),
+            order: 1,
+            child: Container(color: Colors.blue.withOpacity(0.5)),
+          ),
+          GridItem(
+            start: const Size(2, 3),
+            end: const Size(4, 4),
+            child: Container(color: Colors.green),
+          ),
+        ],
+      ),
+      (
+        title: 'Plot multiple nested items - reversed',
+        alignment: MainAxisAlignment.end,
         columns: [0.2, 0.3, 0.3, 0.2],
         rows: [0.2, 0.3, 0.3, 0.2],
         children: [
@@ -65,6 +93,7 @@ void main() {
               child: Container(
                 decoration: const BoxDecoration(color: Colors.yellow),
                 child: GridContainer(
+                  alignment: testCases[i].alignment,
                   columns: testCases[i].columns.cast(),
                   rows: testCases[i].rows.cast(),
                   children: testCases[i].children.cast(),

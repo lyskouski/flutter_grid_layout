@@ -1,3 +1,7 @@
+## 1.1.0
+
+* Add support to reversed order
+
 ## 1.0.4
 
 * Hide elements with negative values

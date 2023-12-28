@@ -66,4 +66,34 @@ GridContainer(
 
 ![Multiple Items](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.2.png)
 
+## Reversed Multiple Items with different layers
+
+```dart
+GridContainer(
+  alignment: MainAxisAlignment.end,
+  columns: [0.2, 0.3, 0.3, 0.2],
+  rows: [0.2, 0.3, 0.3, 0.2],
+  children: [
+    GridItem(
+      start: const Size(0, 0),
+      end: const Size(4, 1),
+      child: Container(color: Colors.red),
+    ),
+    GridItem(
+      start: const Size(1, 0),
+      end: const Size(3, 4),
+      order: 1,
+      child: Container(color: Colors.blue.withOpacity(0.5)),
+    ),
+    GridItem(
+      start: const Size(2, 3),
+      end: const Size(4, 4),
+      child: Container(color: Colors.green),
+    ),
+  ],
+),
+```
+
+![Multiple Items - Reversed](https://raw.githubusercontent.com/lyskouski/flutter_grid_layout/main/test/src/grid_container_test.dart.3.png)
+
 In addition to thanking, you may [treat us to :coffee:](https://www.buymeacoffee.com/lyskouski).
